@@ -1,13 +1,13 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-  const whiteListContract = await ethers.getContractFactory("Whitelist");
+  const whitelistContract = await ethers.getContractFactory("Whitelist");
 
-  const deployedWhiteListContract = await whiteListContract.deploy(10);
+  const deployedWhitelistContract = await whitelistContract.deploy(10);
 
-  await deployedWhiteListContract.deployed();
+  await deployedWhitelistContract.deployed();
 
-  console.log("Whitelist Contract Address:", deployedWhiteListContract.address);
+  console.log("Whitelist Contract Address:", deployedWhitelistContract.address);
 }
 
 main()
@@ -16,5 +16,3 @@ main()
     console.error(error);
     process.exit(1);
   });
-
-// Whitelist Contract Address: 0x1742e1669f552E610c0017D36167c8161E5a66dA
